@@ -7,7 +7,7 @@
 //Source: https://cplus-plusprogramming.blogspot.com/2012/05/card-game-example-it-is-long-progrmming.html
 #include "Cards.h"
 
-void Card::print(){
+void Card::print() const{
 	if (number>=2 && number<=10){
 		cout<< number<<" of ";
 	}
@@ -20,11 +20,11 @@ void Card::print(){
 		}
 	}
 	switch(st){
-		case club: cout<<"clubs"<<endl;break;
-		case diamond: cout<<"diamonds"<<endl;break;
-		case heart: cout<<"hearts"<<endl;break;
-		case spade: cout<<"spades"<<endl;break;
-		case joker: cout<<"joker"<<endl;break;
+		case club: cout<<"clubs";break;
+		case diamond: cout<<"diamonds";break;
+		case heart: cout<<"hearts";break;
+		case spade: cout<<"spades";break;
+		case joker: cout<<"joker";break;
 	}
 }
 bool Card::isequal(Card c2){
@@ -33,10 +33,10 @@ bool Card::isequal(Card c2){
 Card::Card(){
 }
 
-suit Card::getSuit(){
+suit Card::getSuit() const{
     return st;
 }
 
-int Card::getNumber(){
+int Card::getNumber() const{
     return number;
 }

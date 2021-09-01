@@ -20,10 +20,10 @@ private:
 public:
 	Card();
 	Card(int n ,suit s):number(n), st(s){}
-	void print();
+	void print() const;
 	bool isequal(Card);
-	suit getSuit();
-	int getNumber();
+	suit getSuit() const;
+	int getNumber() const;
 };
 
 

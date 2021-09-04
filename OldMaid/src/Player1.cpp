@@ -3,10 +3,14 @@
 
 Player1::Player1(bool active)
 {
-	if (active == true)
+	if (!cards.empty())
 	{
-		cout << "You have" << endl;
+		active = true;
 	}
+	else{
+		active = false;
+	}
+	remaining = 0;
 }
 
 void Player1::Draw(Card index) {
@@ -14,25 +18,26 @@ void Player1::Draw(Card index) {
 	remaining++;
 }
 
-int Player1::P1Cards(int remaining) {
+string Player1::Name() {
+	return name;
+}
+
+
+int Player1::Remaining() {
 	return remaining;
 }
 
 bool Player1::IsEmpty() {
 	//If top is empty return true otherwise return false
-	//f (top != -1){
-	//	return true;
-	//}
-	//else{
-	//	return false;
-	//}
-	//return (cards.empty());
+	return (cards.empty());
 }
 
 Card Player1::Pop(int value) {
 	//Return the top element of stackData and decrement
 	remaining--;
-	return cards.at(value--);
+	Card temp = cards.at(value);
+	cards.erase(cards.begin() + (value));
+	return temp;
 }
 
 bool Player1::Compare() {
@@ -65,13 +70,20 @@ bool Player1::Compare() {
 	return false;
 }
 
-int Player1::Take(int key) {
+void Player1::Take(Card index) {
+	cout << name << " got the ";
+	index.print();
+	cout << endl;
+	cards.push_back( index );
 	remaining++;
-	return key;
+}
+
+Card Player1::getCards(int index) {
+	return cards.at(index);
 }
 
 void Player1::Display() {
-	cout << name <<" have the ";
+	cout << name <<" have "<< remaining <<" cards: The ";
 	int count = 1;
 	for (const Card& i : cards) {
 		i.print();

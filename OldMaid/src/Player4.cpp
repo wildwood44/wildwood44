@@ -14,8 +14,26 @@ void Player4::Draw(Card index) {
 	remaining++;
 }
 
-int Player4::P1Cards(int remaining) {
+string Player4::Name() {
+	return name;
+}
+
+int Player4::Remaining() {
 	return remaining;
+}
+
+bool Player4::IsEmpty() {
+	//If top is empty return true otherwise return false
+	return (cards.empty());
+}
+
+Card Player4::Pop(int value) {
+	//Return the top element of stackData and decrement
+	remaining--;
+	Card temp = cards.at(value);
+	cout << value;
+	cards.erase(cards.begin() + (value));
+	return temp;
 }
 
 bool Player4::Compare() {
@@ -43,13 +61,17 @@ bool Player4::Compare() {
 	return false;
 }
 
-int Player4::Take(int key) {
+void Player4::Take(Card index) {
+	cards.push_back( index );
 	remaining++;
-	return key;
+}
+
+Card Player4::getCards(int index) {
+	return cards.at(index);
 }
 
 void Player4::Display() {
-	cout <<  name <<" has ";
+	cout << name <<" has "<< remaining <<" cards: The ";
 	int count = 1;
 	for (const Card& i : cards) {
 		cout << count << "(";

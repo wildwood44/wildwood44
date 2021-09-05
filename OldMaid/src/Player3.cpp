@@ -1,12 +1,11 @@
 #include "Player3.h"
 
 
-Player3::Player3(bool active)
+Player3::Player3(string name, int id)
 {
-	if (active == true)
-	{
-		//cout << "Player 3";
-	}
+	this->name = name;
+	this->PlayerID = id;
+	remaining = 0;
 }
 
 
@@ -17,6 +16,10 @@ void Player3::Draw(Card index) {
 
 string Player3::Name() {
 	return name;
+}
+
+int Player3::Id() {
+	return PlayerID;
 }
 
 int Player3::Remaining() {

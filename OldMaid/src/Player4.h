@@ -11,15 +11,14 @@ private:
 	int PlayerID = 4;
 	string name = "Player 4";
 	int remaining;
-	int index, i, j;
 	string cardFace;
 	string cardSuit;
 	std::vector<Card> cards;
 public:
-	int turn;
-	Player4(bool active);
+	Player4(string name, int id);
 	void Draw(Card index);
 	string Name();
+	int Id();
 	int Remaining();
 	bool IsEmpty();
 	Card Pop(int value);

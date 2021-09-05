@@ -30,8 +30,6 @@ void Card::print() const{
 bool Card::isequal(Card c2){
 	return (number==c2.number && st==c2.st) ? true :false;
 }
-Card::Card(){
-}
 
 suit Card::getSuit() const{
     return st;

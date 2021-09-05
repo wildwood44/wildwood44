@@ -1,15 +1,10 @@
 #include "Player1.h"
 
 
-Player1::Player1(bool active)
+Player1::Player1(string name, int id)
 {
-	if (!cards.empty())
-	{
-		active = true;
-	}
-	else{
-		active = false;
-	}
+	this->name = name;
+	this->PlayerID = id;
 	remaining = 0;
 }
 
@@ -20,6 +15,10 @@ void Player1::Draw(Card index) {
 
 string Player1::Name() {
 	return name;
+}
+
+int Player1::Id() {
+	return PlayerID;
 }
 
 
@@ -52,11 +51,6 @@ bool Player1::Compare() {
 				cout << " and ";
 				j.print();
 				cout << endl;
-				//cout << "Removing ";
-				//cards.at(count).print();
-				//cout << " and ";
-				//cards.at(count2-1).print();
-				//cout << endl;
 				cards.erase(cards.begin() + count);
 				remaining--;
 				cards.erase(cards.begin() + (count2 -1));
@@ -92,4 +86,3 @@ void Player1::Display() {
 	}
 	cout << endl;
 }
-

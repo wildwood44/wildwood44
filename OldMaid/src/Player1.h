@@ -2,24 +2,23 @@
 #include <iostream>
 #include "Cards.h"
 #include "Deck.h"
-#include "P1Hand.h"
-#include "HashTable.h"
 
 using namespace std;
 
 class Player1
 {
 private:
-	int PlayerID = 1;
-	string name = "You";
+	int PlayerID;
+	string name;
 	int remaining;
 	string cardFace;
 	string cardSuit;
 	std::vector<Card> cards;
 public:
-	Player1(bool active);
+	Player1(string name, int id);
 	void Draw(Card index);
 	string Name();
+	int Id();
 	int Remaining();
 	bool IsEmpty();
 	Card Pop(int value);

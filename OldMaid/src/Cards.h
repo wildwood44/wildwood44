@@ -18,7 +18,6 @@ private:
 	int number;
 	suit st;
 public:
-	Card();
 	Card(int n ,suit s):number(n), st(s){}
 	void print() const;
 	bool isequal(Card);

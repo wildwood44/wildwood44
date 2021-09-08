@@ -1,0 +1,10 @@
+F:\HexaStones\HexaStones\bin\Debug\HexaStones.exe.config
+F:\HexaStones\HexaStones\bin\Debug\HexaStones.exe
+F:\HexaStones\HexaStones\bin\Debug\HexaStones.pdb
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.csprojResolveAssemblyReference.cache
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.Properties.Resources.resources
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.csproj.GenerateResource.Cache
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.exe
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.pdb
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.HexaStones.resources
+F:\HexaStones\HexaStones\obj\Debug\HexaStones.Help.resources

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Request Access</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <h1>Request Access</h1>
+    <p><a href="user/index" th:href="@{user/index}">Back to home page</a></p>
+</div>
+</html>

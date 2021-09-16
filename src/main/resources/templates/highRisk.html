@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Risky data</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <h1>This is a page with data that can be abused!</h1>
+    <p><a href="/user" th:href="@{/user}">Back to home page</a></p>
+</div>
+</body>
+</html>
